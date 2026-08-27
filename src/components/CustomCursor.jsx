@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import logoImg from '../assets/Portfolio/rm-logo.png';
 
 const CustomCursor = () => {
   const dotRef = useRef(null);
@@ -25,8 +26,8 @@ const CustomCursor = () => {
       const x = e.clientX;
       const y = e.clientY;
 
-      const dotSize = 12;
-      const ringSize = 48;
+      const dotSize = 22;
+      const ringSize = 44;
 
       xToDot(x - dotSize / 2);
       yToDot(y - dotSize / 2);
@@ -70,11 +71,17 @@ const CustomCursor = () => {
         }}
       ></div>
 
-      {/* Global Custom Cursor Dot */}
+      {/* Global Custom Cursor Dot -> Logo Mark */}
       <div
         ref={dotRef}
-        className="hidden md:block fixed top-0 left-0 z-[9999] pointer-events-none w-3 h-3 bg-red-600 rounded-full shadow-[0_0_15px_#E50914]"
-      ></div>
+        className="hidden md:flex fixed top-0 left-0 z-[9999] pointer-events-none w-[22px] h-[22px] items-center justify-center rounded-full bg-red-600 shadow-[0_0_15px_#E50914] p-[4px]"
+      >
+        <img
+          src={logoImg}
+          alt=""
+          className="w-full h-full object-contain brightness-0 invert"
+        />
+      </div>
 
       {/* Global Custom Cursor Ring */}
       <div
