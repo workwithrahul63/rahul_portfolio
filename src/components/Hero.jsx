@@ -297,9 +297,9 @@ const Hero = () => {
       {/* 4. Ultra Pro Max Custom Precision Cursor Suite */}
       <div
         ref={cursorDotRef}
-        className="absolute top-0 left-0 z-50 pointer-events-none w-[22px] h-[22px] flex items-center justify-center rounded-full bg-red-600 shadow-[0_0_15px_#E50914] p-[4px]"
+        className="absolute top-0 left-0 z-50 pointer-events-none w-[22px] h-[22px] flex items-center justify-center rounded-full bg-white shadow-[0_0_15px_#E50914] p-[4px]"
       >
-        <img src={logoImg} alt="" className="w-full h-full object-contain brightness-0 invert" />
+        <img src={logoImg} alt="" className="w-full h-full object-contain" />
       </div>
 
       <div
