@@ -156,6 +156,10 @@ const About = () => {
                   <span className="text-red-500 font-bold">&#8250;</span>
                   <span>Achieved outstanding results by staying current with <strong className="text-white">industry design trends</strong>.</span>
                 </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-red-500 font-bold">&#8250;</span>
+                  <span>Led <strong className="text-white">cross-functional teams of 5-6 members</strong>, consistently exceeding performance targets while fostering a positive team environment.</span>
+                </li>
               </ul>
             </div>
             
