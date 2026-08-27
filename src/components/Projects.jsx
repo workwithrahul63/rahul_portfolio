@@ -12,7 +12,9 @@ const projectsData = [
     description: "Scroll-stopping social media creatives designed to boost engagement while staying true to brand identity.",
     tags: ["Photoshop", "Illustrator", "Canva"],
     match: "99%",
-    episode: "S01 E01"
+    episode: "S01 E01",
+    image: "https://static.wixstatic.com/media/47c346_286fe06f3f944facb8022ecd096c814a~mv2.jpg/v1/fit/w_600,h_600,q_90,enc_avif,quality_auto/47c346_286fe06f3f944facb8022ecd096c814a~mv2.jpg",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio-collections/recent-works/social-media-posts"
   },
   {
     title: "Web Page Banners",
@@ -20,7 +22,9 @@ const projectsData = [
     description: "Eye-catching web banners combining strong visual hierarchy with clear, on-brand messaging.",
     tags: ["Photoshop", "Illustrator", "Adobe Express"],
     match: "98%",
-    episode: "S01 E02"
+    episode: "S01 E02",
+    image: "https://static.wixstatic.com/media/47c346_bd8c67dacc2a4dccb50798b7c2be9840~mv2.jpg/v1/fit/w_600,h_400,q_90,enc_avif,quality_auto/47c346_bd8c67dacc2a4dccb50798b7c2be9840~mv2.jpg",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio-collections/recent-works/web-page-sliders"
   },
   {
     title: "Flyers",
@@ -28,7 +32,45 @@ const projectsData = [
     description: "Polished promotional flyers crafted with CorelDraw and InDesign for multinational client campaigns.",
     tags: ["CorelDraw", "InDesign", "Photoshop"],
     match: "97%",
+    image: "https://static.wixstatic.com/media/47c346_3ffddf1aced84aadbd9a0d500b0a68bf~mv2.jpg/v1/fit/w_600,h_780,q_90,enc_avif,quality_auto/47c346_3ffddf1aced84aadbd9a0d500b0a68bf~mv2.jpg",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio-collections/recent-works/flyers",
     episode: "S01 E03"
+  },
+  {
+    title: "T-Shirt Mockups",
+    category: "Apparel & Merchandise Design",
+    description: "Realistic apparel mockups showcasing print-ready graphics and branded merchandise concepts for clients.",
+    tags: ["Photoshop", "Illustrator", "Mockup Design"],
+    match: "96%",
+    episode: "S01 E04",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio"
+  },
+  {
+    title: "Promotional Branding",
+    category: "Brand Campaigns",
+    description: "End-to-end promotional branding assets built to keep campaigns visually consistent across every touchpoint.",
+    tags: ["CorelDraw", "Illustrator", "Brand Identity"],
+    match: "97%",
+    episode: "S01 E05",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio"
+  },
+  {
+    title: "Logo Recreation",
+    category: "Vector & Brand Assets",
+    description: "Precise vector redraws and logo recreations delivering clean, scalable brand marks from low-quality source files.",
+    tags: ["Illustrator", "Vector Redraw", "CorelDraw"],
+    match: "98%",
+    episode: "S01 E06",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/portfolio"
+  },
+  {
+    title: "Team Management",
+    category: "Leadership & Collaboration",
+    description: "Led cross-functional teams of 5-6 members, coordinating design delivery while consistently exceeding performance targets and fostering a positive, collaborative team environment.",
+    tags: ["Team Leadership", "Cross-Functional Collab", "Client Communication"],
+    match: "99%",
+    episode: "S01 E07",
+    link: "https://rahulmacwan63.wixsite.com/rm-site/about"
   }
 ];
 
@@ -241,16 +283,31 @@ const Projects = () => {
               className="hidden md:block absolute w-[80vw] md:w-[33vw] max-w-[380px] aspect-[16/10] will-change-transform"
               style={{ zIndex: 10 + i }}
             >
-              <div className="w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414]/95 backdrop-blur-2xl shadow-[0_25px_50px_rgba(0,0,0,0.9)] transition-all duration-500 group hover:scale-[1.04] hover:border-red-600 hover:shadow-[0_35px_80px_rgba(229,9,20,0.35)] hover:-translate-y-2 cursor-pointer relative z-10 p-7 flex flex-col justify-between">
-                
+              <a
+                href={project.image || project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414]/95 backdrop-blur-2xl shadow-[0_25px_50px_rgba(0,0,0,0.9)] transition-all duration-500 group hover:scale-[1.04] hover:border-red-600 hover:shadow-[0_35px_80px_rgba(229,9,20,0.35)] hover:-translate-y-2 cursor-pointer relative z-10 flex flex-col justify-between"
+              >
+                {/* Cover Image (top portion, full visibility) */}
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-[#141414]/10" />
+
+                <div className="relative z-10 p-7 flex flex-col justify-between h-full">
                 {/* Top Card Header */}
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-red-500 bg-red-600/10 px-2.5 py-1 rounded border border-red-600/20">
+                  <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-red-500 bg-black/70 px-2.5 py-1 rounded border border-red-600/40">
                     {project.episode}
                   </span>
                   <div className="flex items-center gap-2">
                     <span className="text-xs font-mono text-red-400 font-bold">{project.match} Match</span>
-                    <span className="text-[10px] font-mono border border-white/30 px-1 text-white/70">HD</span>
+                    <span className="text-[10px] font-mono border border-white/30 px-1 text-white/70 bg-black/70">HD</span>
                   </div>
                 </div>
 
@@ -278,7 +335,8 @@ const Projects = () => {
 
                 {/* Red Glowing Corner Accent */}
                 <div className="absolute bottom-4 right-4 w-2 h-2 rounded-full bg-red-600 group-hover:shadow-[0_0_15px_#E50914] transition-all" />
-              </div>
+                </div>
+              </a>
             </div>
           ))}
 
@@ -311,25 +369,38 @@ const Projects = () => {
             ref={el => mobileCardsRef.current[i] = el}
             className="shrink-0 w-[78vw] aspect-[16/11] snap-center will-change-transform relative z-10"
           >
-            <div className="w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414] p-6 flex flex-col justify-between shadow-[0_20px_40px_rgba(0,0,0,0.9)]">
-              <div className="flex items-center justify-between">
+            <a
+              href={project.image || project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414] p-6 flex flex-col justify-between shadow-[0_20px_40px_rgba(0,0,0,0.9)] relative"
+            >
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-90"
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/85 to-[#141414]/10" />
+              <div className="flex items-center justify-between relative z-10">
                 <span className="text-[10px] font-mono font-bold tracking-widest text-red-500 bg-red-600/10 px-2 py-0.5 rounded">
                   {project.episode}
                 </span>
                 <span className="text-xs font-mono text-red-400 font-bold">{project.match} Match</span>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 relative z-10">
                 <h3 className="text-xl font-black text-white">{project.title}</h3>
                 <p className="text-xs text-white/70 font-light line-clamp-2">{project.description}</p>
               </div>
-              <div className="flex flex-wrap gap-1 pt-2 border-t border-white/10">
+              <div className="flex flex-wrap gap-1 pt-2 border-t border-white/10 relative z-10">
                 {project.tags.slice(0, 3).map((tag, tIdx) => (
                   <span key={tIdx} className="text-[10px] font-mono text-white/60 bg-white/5 px-2 py-0.5 rounded">
                     {tag}
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
