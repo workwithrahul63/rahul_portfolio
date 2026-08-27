@@ -69,8 +69,8 @@ const Hero = () => {
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      const dotSize = 12;
-      const ringSize = 48;
+      const dotSize = 22;
+      const ringSize = 44;
 
       // Update Spotlight position instantly via inline style
       if (spotlightRef.current) {
@@ -297,8 +297,10 @@ const Hero = () => {
       {/* 4. Ultra Pro Max Custom Precision Cursor Suite */}
       <div
         ref={cursorDotRef}
-        className="absolute top-0 left-0 z-50 pointer-events-none w-3 h-3 bg-red-600 rounded-full shadow-[0_0_15px_#E50914]"
-      ></div>
+        className="absolute top-0 left-0 z-50 pointer-events-none w-[22px] h-[22px] flex items-center justify-center rounded-full bg-red-600 shadow-[0_0_15px_#E50914] p-[4px]"
+      >
+        <img src={logoImg} alt="" className="w-full h-full object-contain brightness-0 invert" />
+      </div>
 
       <div
         ref={cursorRingRef}
