@@ -12,7 +12,7 @@ const Footer = () => {
               RAHUL<span className="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
             </div>
             <p className="text-xs font-mono text-white/50 tracking-widest uppercase">
-              // GRAPHICS DESIGN SERIES &bull; SEASON 2026
+              // GRAPHICS DESIGN SERIES &bull; SEASON 2019 - PRESENT
             </p>
           </div>
 
