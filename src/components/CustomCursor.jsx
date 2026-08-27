@@ -74,12 +74,12 @@ const CustomCursor = () => {
       {/* Global Custom Cursor Dot -> Logo Mark */}
       <div
         ref={dotRef}
-        className="hidden md:flex fixed top-0 left-0 z-[9999] pointer-events-none w-[22px] h-[22px] items-center justify-center rounded-full bg-red-600 shadow-[0_0_15px_#E50914] p-[4px]"
+        className="hidden md:flex fixed top-0 left-0 z-[9999] pointer-events-none w-[22px] h-[22px] items-center justify-center rounded-full bg-white shadow-[0_0_15px_#E50914] p-[4px]"
       >
         <img
           src={logoImg}
           alt=""
-          className="w-full h-full object-contain brightness-0 invert"
+          className="w-full h-full object-contain"
         />
       </div>
 
