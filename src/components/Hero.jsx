@@ -134,7 +134,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#050505] overflow-hidden flex flex-col justify-between select-none cursor-none"
+      className="relative w-full min-h-screen md:h-screen bg-[#050505] overflow-hidden flex flex-col justify-between select-none cursor-none"
     >
       <style>{`
         @keyframes marquee {
@@ -171,7 +171,7 @@ const Hero = () => {
       ></div>
 
       {/* 3. Main Content Layer */}
-      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-between pt-24 pb-12">
+      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 min-h-screen md:h-full flex flex-col justify-between pt-28 pb-12 gap-10 md:gap-0">
         
         {/* Top Netflix Cinematic Badge */}
         <div className="hero-anim-item flex items-center justify-between w-full">
@@ -188,7 +188,7 @@ const Hero = () => {
         </div>
 
         {/* Main Center Cinematic Stage Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 md:my-auto">
           
           {/* Left Side: Developer Story & Description */}
           <div className="lg:col-span-5 flex flex-col items-start space-y-5 text-left">
